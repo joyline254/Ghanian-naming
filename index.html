@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="CSS/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body> 
+    <form  method="GET" >
+	        YOUR  BIRTHDATE<br>
+			<select name="month">
+			<option value="month">Month</option>
+			<option value="january">January</option>						
+			<option value="february">February</option>
+			<option value="march">March</option>
+			<option value="may">May</option>
+			<option value="june">June</option>
+			<option value="july">July</option>
+			<option value="august">August</option>
+			<option value="september">September</option>
+			<option value="october">October</option>
+			<option value="november">November</option>
+			<option value="December">December</option>
+			</select> 
+			<input type="text" placeholder="DD" id="date">
+			<input type="text" placeholder="YYYY" id="year">
+			<button>check</button><br>
+			<h1>Result </h1>	
+			Gender <br>
+			    <div>
+				<label for="Male">Male</label>
+				<input name="Gender" type="radio" id="Male"  >
+		        </div>
+				<div>
+				<label for="Female">Female
+				<input type="radio" id="Female" name="Gender" required>
+				</label>
+				</div>
+				<button type="reset">RESET</button>
+				<button type="submit">SUBMIT</button>
+		</form>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+		<script src="JS/script.js"></script>
+</body>
+</html>
