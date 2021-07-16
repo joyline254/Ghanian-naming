@@ -17,5 +17,6 @@ JAVASCRIPT
 Contact me if you run into any issues or have questions, ideas or concerns.
 joylinechep001@gmail.com
 ### License
+https://github.com/joyline254/FRIENDREPO/blob/main/css/license
 
 Copyright (c) 2021} {JOYLINE .JJ}
