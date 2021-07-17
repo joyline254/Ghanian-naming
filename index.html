@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<link rel="stylesheet" href="CSS/style.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="CSS/style.css" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -12,27 +11,24 @@
 	<title>Document</title>
 </head>
 <body> 
+	<p id="p1">
+		<pre>
+		This application displays a users Akan name depending on the week they
+		were born on and the gender as well.This is per the input of the user.
+
+		Akan names are derived from Ghanian culture.In Ghana,children are given 
+		their first name as a 'day'name which corresponds to the day in the week
+		they were born on.
+		</pre>
+	</p>
     <form  method="GET" >
 	        YOUR  BIRTHDATE<br>
-			<select name="month">
-			<option value="month">Month</option>
-			<option value="january">January</option>						
-			<option value="february">February</option>
-			<option value="march">March</option>
-			<option value="may">May</option>
-			<option value="june">June</option>
-			<option value="july">July</option>
-			<option value="august">August</option>
-			<option value="september">September</option>
-			<option value="october">October</option>
-			<option value="november">November</option>
-			<option value="December">December</option>
-			</select> 
-			<input type="text" placeholder="DD" id="date">
-			<input type="text" placeholder="YYYY" id="year">
-			<button>check</button><br>
+			<input type="text" placeholder="MM" id="month" required>
+			<input type="text" placeholder="DD" id="date" required>
+			<input type="text" placeholder="YYYY" id="year" required>
+			<button>CHECK</button><br>
 			<h1>Result </h1>	
-			Gender <br>
+			<p id="Gender">Gender</p> <br>
 			    <div>
 				<label for="Male">Male</label>
 				<input name="Gender" type="radio" id="Male"  >
@@ -42,9 +38,12 @@
 				<input type="radio" id="Female" name="Gender" required>
 				</label>
 				</div>
-				<button type="reset">RESET</button>
-				<button type="submit">SUBMIT</button>
+				<button type="submit" onclick="onSubmit()">SUBMIT</button>
+				<button type="reset">RESET</button><br><br>
+			
 		</form>
+		<p id="output"></p>
+
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 		<script src="JS/script.js"></script>
 </body>

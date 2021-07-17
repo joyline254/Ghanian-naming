@@ -1,10 +1,20 @@
-body {text-align: center;
+
+
+body {
+    text-align: center;
+    background-color: rgb(4, 68, 90);
     
 
+}
+#p1{
+    font-size: 60%;
 }
 #date{
     width: 6%;
 }
 #year{
     width: 9%;
+}
+h1{
+    font-size: small;
 }

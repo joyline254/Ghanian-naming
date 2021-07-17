@@ -8,6 +8,7 @@ Internet connectivity
 A search engine
 A browser
 ## Known Bugs
+The application assumes the user was born in the 21st century
 The application fails to validate the accuracy of dates and years.
 ## Technologies Used
 HTML 
