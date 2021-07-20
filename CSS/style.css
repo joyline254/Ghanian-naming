@@ -3,11 +3,14 @@
 body {
     text-align: center;
     background-color: rgb(4, 68, 90);
-    
-
+    background-image: url(../IMAGES/ground.jpg);
+    background-repeat:round;
+    background-position:top;
 }
+
 #p1{
-    font-size: 60%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(139, 129, 34);
 }
 #date{
     width: 6%;

@@ -1,0 +1,3 @@
+function john() {
+    alert("hello")
+}
