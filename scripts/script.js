@@ -20,115 +20,95 @@ console.log(male);
 
 
 function getInputValues() {
-   //console.log("Good to go");
-
-    let month =document.getElementById("mm").value;
-    let date =document.getElementById("dd").value;
-    let year =document.getElementById("yr").value;
-
-    const gender= document.querySelector('input[name="Gender"]:checked').value;
-
+    //console.log("Good to go");
+    let month = document.getElementById("mm").value;
+    let date = document.getElementById("dd").value;
+    let year = document.getElementById("yr").value;
+    const genderMale = document.getElementById('Male');
+    const genderFemale = document.getElementById('Female');
     //Make sure user enters values
-    if (mm=="") {
+    if (month == "") {
         alert("Month can not be empty")
-        return false;
-        
-    }
-    if (dd=="") {
+    } else if (date == "") {
         alert("Date can not be empty")
-        return false;
-        
-    }
-    if (yr=="") {
+    } else if (year == "") {
         alert("Year can not be empty")
-        return false;
-        
+    } else {
+        //Validate the inputs values
+        if (month <= 0 || month >= 12) {
+            alert("This is an invalid number for month")
+        }
+        else if (date <= 0 || date >= 31) {
+            alert("This is an invalid number for date")
+        }
+        else if (year <= 1900 || year >= 2021) {
+            alert("This is an invalid number for month")
+        }
+        else if (genderMale.checked == false && genderFemale.checked == false) {
+            alert("Please select your gender")
+        }
+        else {
+            //Get the exact day of the week
+            let y = year.toString();
+            let CC = y.slice(0, 2);
+            let YY = y.slice(2, 4);
+            let MM = month;
+            let DD = date;
+            let day = (((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD) % 7;
+            let exactDay = Math.trunc(day);
+            console.log(exactDay);
+            if (genderMale.checked) {
+                document.getElementById('output').innerHTML = "Your Akan name is: " + male[exactDay];
+            }
+            else {
+                document.getElementById('output').innerHTML = "Your Akan name is: " + female[exactDay];
+            }
+        }
     }
-
-//Validate the inputs values
-if (mm<=0 || mm>=12) {
-     var error=alert("This is an invalid number for month")
+}
     
-}
-else if(dd<=0 || dd>=31) {
-   var error=alert("This is an invalid number for date")
-   
-}
-else if (yr<=1900 || yr>=2021) {
-    var error=alert("This is an invalid number for month")
-   
-}
-else
-{
-    var error="";
-}   
-//Incase user leaves it blank
-if (error!="") 
-{
-    alert(error);
-    console.log(error)
-    return
-    
-}
-//Get the exact day of the week
-let y=yr.toString();
-let cc=y.slice(0,2);
-let yy=y.slice(2,4);
-let day=(((cc/4)-2*cc-1)+((5*yy/4))+((26*(mm+1)/10))+dd)%7
-let exactDay=Math.trunc(day);
-//console.log(exactDay);
-
-
-    if (exactDay=1 && document.getElementById("Male")) {
-        "Your Akan name is: "+male[0]
-       
-    }
-    else {
-        document.getElementById.innerHTML = "Your Akan name is: " +female[0]; 
-    }
-    if (exactDay=2 && document.getElementById("Male")) {
-         "Your Akan name is:" +male[1];
+    // if (exactDay=2 && document.getElementById("Male")) {
+   //      "Your Akan name is:" +male[1];
+    //    
+    //} else {
+      //  document.getElementById.innerHTML = "Your Akan name is: " +female[1];
         
-    } else {
-        document.getElementById.innerHTML = "Your Akan name is: " +female[1];
+    //}
+    //if (exactDay=3 && document.getElementById("Male")) {
+      //  document.getElementById.innerHTML = "Your Akan name is:" +male[2]; 
         
-    }
-    if (exactDay=3 && document.getElementById("Male")) {
-        document.getElementById.innerHTML = "Your Akan name is:" +male[2]; 
-        
-    } else {
-        document.getElementById.innerHTML = "Your Akan name is: " +female[2];
-    }
-    if (exactDay=4 && document.getElementById("Male")) {
-        document.getElementById("output").innerHTML = "Your Akan name is:" +male[3]; 
+    //} else {
+      //  document.getElementById.innerHTML = "Your Akan name is: " +female[2];
+    //}
+    //if (exactDay=4 && document.getElementById("Male")) {
+      //  document.getElementById("output").innerHTML = "Your Akan name is:" +male[3]; 
         
         
-    } else { 
-        document.getElementById.innerHTML = "Your Akan name is: " +female[3];
+  //  } else { 
+       // document.getElementById.innerHTML = "Your Akan name is: " +female[3];
         
-    }
-    if (exactDay=5 && document.getElementById("Male")) {
-        document.getElementById.innerHTML = "Your Akan name is:" +male[4];
-        
-        
-    } else {
-        document.getElementById.innerHTML = "Your Akan name is: " +female[4];
-        
-    }
-    if (exactDay=6 && document.getElementById("Male")) {
-        document.getElementById.innerHTML = "Your Akan name is:" +male[5]; 
+    //}
+    //if (exactDay=5 && document.getElementById("Male")) {
+      //  document.getElementById.innerHTML = "Your Akan name is:" +male[4];
         
         
-    } else {
-        document.getElementById.innerHTML = "Your Akan name is: " +female[5];
+    //} else {
+      //  document.getElementById.innerHTML = "Your Akan name is: " +female[4];
         
-    }
-    if (exactDay=7 && document.getElementById("Male")) {
-        document.getElementById.innerHTML = "Your Akan name is:" +male[6]; 
+    //}
+    //if (exactDay=6 && document.getElementById("Male")) {
+       // document.getElementById.innerHTML = "Your Akan name is:" +male[5]; 
+      //
+        
+ //   } else {
+   //     document.getElementById.innerHTML = "Your Akan name is: " +female[5];
+        
+    //}
+    //if (exactDay=7 && document.getElementById("Male")) {
+      //  document.getElementById.innerHTML = "Your Akan name is:" +male[6]; 
         
         
-    } else {
-        document.getElementById.innerHTML = "Your Akan name is: " +female[6];
-    }  
-
-}
+    //} else {
+      //  document.getElementById.innerHTML = "Your Akan name is: " +female[6];
+    //}  
+//}

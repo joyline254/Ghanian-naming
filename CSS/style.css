@@ -1,23 +1,18 @@
 
-
 body {
     text-align: center;
-    background-color: rgb(4, 68, 90);
-    background-image: url(../IMAGES/ground.jpg);
+    background-color: rgb(24, 61, 58);
+    color: black;
+    background-image: url(../IMAGES/brownishjpg);
     background-repeat:round;
     background-position:top;
 }
 
-#p1{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: rgb(139, 129, 34);
+p{
+    background-color: black;
+    font-size: large;
+    color: rgb(194, 78, 98);
 }
-#date{
-    width: 6%;
-}
-#year{
-    width: 9%;
-}
-h1{
-    font-size: small;
+form{
+    padding: 12px;
 }

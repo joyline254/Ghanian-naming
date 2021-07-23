@@ -8,8 +8,7 @@ Internet connectivity
 A search engine
 A browser
 ## Known Bugs
-The application fails to validate the accuracy of dates and years.
-It constantly chooses one Akan name
+No known bugs
 ## Technologies Used
 HTML 
 CSS
@@ -18,6 +17,6 @@ JAVASCRIPT
 Contact me if you run into any issues or have questions, ideas or concerns.
 joylinechep001@gmail.com
 ### License
-https://github.com/joyline254/FRIENDREPO/blob/main/css/license
+https://github.com/joyline254/Ghanian-naming/blob/main/CSS/license
 
 Copyright (c) 2021} {JOYLINE .JJ}

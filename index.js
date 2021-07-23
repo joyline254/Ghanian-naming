@@ -1,3 +1,0 @@
-function john() {
-    alert("hello")
-}
