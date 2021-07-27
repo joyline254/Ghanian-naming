@@ -41,8 +41,8 @@ function getInputValues() {
         else if (date <= 0 || date >= 31) {
             alert("This is an invalid number for date")
         }
-        else if (year <= 1900 || year >= 2021) {
-            alert("This is an invalid number for month")
+        else if (year <= 1900 || year > 2021) {
+            alert("This is an invalid number for year")
         }
         else if (genderMale.checked == false && genderFemale.checked == false) {
             alert("Please select your gender")
